@@ -1,9 +1,11 @@
 import {
   ArrowLeft,
   ArrowRight,
+  Edit2Icon,
   Frown,
   MoreVertical,
   Mountain,
+  Trash2Icon,
   type Icon as LucideIcon,
 } from "lucide-react";
 
@@ -15,4 +17,6 @@ export const Icons = {
   arrowLeft: ArrowLeft,
   sad: Frown,
   more: MoreVertical,
+  edit: Edit2Icon,
+  trash: Trash2Icon,
 };
