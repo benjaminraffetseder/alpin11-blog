@@ -1,5 +1,12 @@
 import { Box, Container, Heading } from "@/components/client/chakra-ui";
 import { siteConfig } from "@/config/site";
+import { Metadata } from "next";
+import PostList from "./PostList";
+
+export const metadata: Metadata = {
+  title: `Home | ${siteConfig.name}`,
+  description: siteConfig.description,
+};
 
 export default function Home() {
   const { description } = siteConfig;
@@ -12,6 +19,7 @@ export default function Home() {
               {description}
             </Heading>
           </Box>
+          <PostList />
         </Container>
       </Box>
     </main>
