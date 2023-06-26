@@ -3,9 +3,12 @@
 import customTheme from "@/config/theme";
 import { CacheProvider } from "@chakra-ui/next-js";
 import { ChakraProvider } from "@chakra-ui/react";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
+const queryClient = new QueryClient();
 
 export function Providers({ children }: { children: React.ReactNode }) {
   return (
@@ -21,7 +24,12 @@ export function Providers({ children }: { children: React.ReactNode }) {
       `}</style>
 
       <CacheProvider>
-        <ChakraProvider theme={customTheme}>{children}</ChakraProvider>
+        <ChakraProvider theme={customTheme}>
+          <QueryClientProvider client={queryClient}>
+            {children}
+            <ReactQueryDevtools initialIsOpen={false} />
+          </QueryClientProvider>
+        </ChakraProvider>
       </CacheProvider>
     </>
   );
