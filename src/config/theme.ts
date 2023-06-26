@@ -1,3 +1,4 @@
+import { cardTheme } from "@/components/ui/BlogCard";
 import { extendTheme } from "@chakra-ui/react";
 
 const customTheme = extendTheme({
@@ -40,6 +41,7 @@ const customTheme = extendTheme({
     },
   },
   components: {
+    Card: cardTheme,
     Container: {
       baseStyle: {
         maxW: "container.xl",
