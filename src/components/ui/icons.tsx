@@ -2,6 +2,7 @@ import {
   ArrowLeft,
   ArrowRight,
   Frown,
+  MoreVertical,
   Mountain,
   type Icon as LucideIcon,
 } from "lucide-react";
@@ -13,4 +14,5 @@ export const Icons = {
   arrowRight: ArrowRight,
   arrowLeft: ArrowLeft,
   sad: Frown,
+  more: MoreVertical,
 };
