@@ -1,3 +1,4 @@
+import MainNavigation from "@/components/MainNavigation";
 import { siteConfig } from "@/config/site";
 import "./globals.css";
 import { Providers } from "./providers";
@@ -16,7 +17,10 @@ export default function RootLayout({
     <html lang="en">
       <body suppressHydrationWarning={true}>
         <Providers>
-          <div className="layout">{children}</div>
+          <div className="layout">
+            <MainNavigation />
+            {children}
+          </div>
         </Providers>
       </body>
     </html>

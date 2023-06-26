@@ -39,6 +39,43 @@ const customTheme = extendTheme({
       },
     },
   },
+  components: {
+    Container: {
+      baseStyle: {
+        maxW: "container.xl",
+        px: 10,
+      },
+    },
+    Link: {
+      baseStyle: {
+        _hover: {
+          textDecoration: "none",
+        },
+      },
+      sizes: {
+        sm: {
+          fontSize: "sm",
+        },
+        md: {
+          fontSize: "md",
+        },
+      },
+      variants: {
+        default: {
+          color: "brand.500",
+          _hover: {
+            color: "brand.400",
+          },
+        },
+        white: {
+          color: "black.50",
+          _hover: {
+            color: "black.100",
+          },
+        },
+      },
+    },
+  },
 });
 
 export default customTheme;
