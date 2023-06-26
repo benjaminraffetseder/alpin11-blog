@@ -75,6 +75,16 @@ const customTheme = extendTheme({
             color: "black.100",
           },
         },
+        button: {
+          color: "black.50",
+          backgroundColor: "black.800",
+          px: 4,
+          py: 2,
+          borderRadius: "md",
+          _hover: {
+            backgroundColor: "brand.500",
+          },
+        },
       },
     },
   },

@@ -51,8 +51,6 @@ const PostList = () => {
     }
   };
 
-  console.log(data);
-
   if (isLoading) {
     return <LoadingSpinner />;
   }
