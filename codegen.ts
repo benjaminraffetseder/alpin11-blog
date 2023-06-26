@@ -3,7 +3,7 @@ import dotenv from "dotenv";
 
 dotenv.config();
 const config: CodegenConfig = {
-  schema: process.env.API,
+  schema: process.env.NEXT_API,
   documents: "src/graphql/**/*.graphql",
   generates: {
     "src/generated/graphql.ts": {
