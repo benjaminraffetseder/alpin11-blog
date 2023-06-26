@@ -11,6 +11,11 @@ const config: CodegenConfig = {
         "typescript",
         "typescript-operations",
         "typescript-graphql-request",
+        {
+          add: {
+            content: "// @ts-nocheck",
+          },
+        },
       ],
       config: {
         rawRequest: true,
